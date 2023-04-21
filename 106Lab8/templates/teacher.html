@@ -1,0 +1,28 @@
+{% extends 'base_home.html' %}
+
+{% block options %}
+    <div class="option_container">
+        <div class="teacher"> Your Courses </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="table_format">
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Teacher</th>
+                <th>Time</th>
+                <th>Students Enrolled</th>
+            </tr>
+            {% for row in rows %}
+            <tr>  
+                <td class="go"><a href ="{{ url_for('teacher_course', course_id=row.id)}}">{{row.course_name}}</a></td>
+                <td>{{row.name}}</td>
+                <td>{{row.time}}</td>
+                <td>{{row.number_enrolled}}/{{row.capacity}}</td>    
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

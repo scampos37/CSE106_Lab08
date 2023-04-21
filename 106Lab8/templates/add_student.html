@@ -1,0 +1,36 @@
+{% extends 'base_home.html' %}
+
+{% block options %}
+    <div class="option_container">
+        <div class="student_Option"><a href="{{ url_for('student_your_courses') }}"> Your Courses </a></div>
+        <div class="live_student_option"><a href="{{ url_for('student_add_courses') }}"> Add Courses </a></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="table_format">
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Teacher</th>
+                <th>Time</th>
+                <th>Students Enrolled</th>
+                <th>Add Class</th>
+            </tr>
+            {% for class in classes %}
+            <tr>
+                <td>{{class.course_name}}</td>
+                <td>{{class.name}}</td>
+                <td>{{class.time}}</td>
+                <td>{{class.number_enrolled}}/{{class.capacity}}</td>
+                {% for enroll in enrolled if enroll.classes_id == class.id and enroll.student_id == person.id%}
+                    <td class="Remove"><a href="{{ url_for('remove', class_id=class.id) }}">Remove</a></td>
+                {% else %}
+                    <td class="Add"><a href="{{ url_for('add', class_id=class.id) }}">Add</a></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+
+        </table>
+    </div>
+{% endblock %}
