@@ -1,0 +1,154 @@
+body{
+    background-color:deepskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login, .log_form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log_form{
+    background-color: gold;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.home_inline-divbox{
+    display: inline;
+    border: 1px solid black;
+    background-color: gold;
+    width: 90%;
+    justify-content: space-between;
+    
+}
+
+h4{
+    text-align: center;
+    justify-content: space-between;
+    display: inline-block;
+    
+}
+
+.title_homepage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+
+.navbar h3 a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.content_container{
+    background-color: royalblue;
+    width: 90%;
+    height: 15rem;
+}
+
+.option_container{
+    display: flex;
+    width: 100%;
+}
+
+.student_Option, .live_student_option, .live_teacher_option{
+    display: flex;
+    background: whitesmoke;
+    width: 50%;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.student_Option:hover, .live_student_option:hover, .live_teacher_option:hover{
+    background-color: yellow;
+    color: black;
+}
+
+.live_teacher_option{
+    width: 100%;
+}
+
+.live_student_option, .live_teacher_option{
+    background: lightgray;
+    border: solid black;
+}
+
+.teacher{
+    display: flex;
+    background: whitesmoke;
+    width: 50%;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.student_option a, .live_student_option a, .live_teacher_option a{
+    text-decoration: none;
+    color: black;
+}
+.table_format{
+    width: auto;
+    padding: 2rem;
+}
+
+table_format table, th, td{
+    border: 2px solid;
+    text-align: left;
+    
+}
+
+.table_format table{
+    width: 100%;
+    border-collapse: collapse;
+    background: whitesmoke;
+}
+
+.Add{
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.Add:hover{
+    background-color: green;
+    color: black;
+}
+
+.Remove{
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.Remove:hover{
+    background-color: red;
+    color:black;
+}
+
+.go{
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.go:hover{
+    background-color: burlywood;
+}
+
+button{
+    background-color: burlywood;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: yellow;
+    color:black
+}
