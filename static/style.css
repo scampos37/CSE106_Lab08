@@ -1,5 +1,5 @@
 body{
-    background-color:deepskyblue;
+    background-color: #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,7 @@ h4{
 }
 
 .content_container{
-    background-color: royalblue;
+    background-color: #39b;
     width: 90%;
     height: 15rem;
 }
